@@ -32,3 +32,36 @@ function fn(x){ 이차함수, return x * x; 제곱근으로 돌려줘요
 number는 숫자가 문자로 들어오더라도 숫자로 인식하라고 하는 것
 16. 콘솔창에서 숫자는 파란색으로 뜨고 문자는 검정색으로 뜬다. 
 17. prompt로 받은 것은 문자로 받기때문에 number을 해주는 것이다. 
+18. var idx 고유값
+19. const log = console.log;
+     const는 상수
+     다 치기 귀찮으니까 콘솔.로그를 로그에 담은 것
+20. var html; 선언문
+        html = "<div></div>"; 선언된 변수
+        html = "<ul><li></li></ul>" 이게 적용됨
+21. log(fn) 함수를 변수에 넣을 수 있다. 함수 function 이 콘솔에 등장
+22. document.getElementById() document가 가지고 있는 method
+23. alt shift a 전체주석(드래그영역)
+24. 컨트롤 / 한줄주석
+25. 한줄복사 : 시프트 알트 화살표 아래
+     한줄 이동 : 알트 화살표
+26. 컨트롤 알트 v 줄정리
+27. 자바스크립트에 변수는 함수, 문자, 숫자 다 들어간다. 
+28. css보다 자바스크립트가 우선하는 것처럼 보임. 실상은 그런건 아니고 검사를 해보면 자바 스크립트 문법이
+태그안에 스타일 해서 들어감
+css가 인라인 코딩으로 들어가게 됨
+인라인 코딩이 우선순위가 높고, 그다음 스타일, 그다음 main.css 링크로 타고 들어가는 것
+29.     .box {background-color: #00f;}
+        div{background-color: #ff0;}
+ class가 우선순위가 높으니까 .box가 들어감
+그리고 #box1이 제일 높음.
+30. <div class="box" id="box1" style="background-color: #f30";></div> 이게 인라인코딩
+31. 그리고 !important가 제일 높음
+32. 스크립트에서 box1.style.backgroundColor = "#0ff"; 를 만나면 이걸로 변경이 되어서 콘솔에서 인라인코딩으로 태그 안에 스타일이
+변경되어서 들어감
+33. box1.addEventListener("click", function (){
+            
+          });
+box1을 클릭하면 함수가 실행됨(콜백함수 개념)
+자바스크립트의 이벤트는 이렇게 적힘
+정적인 웹페이지를 동적으로

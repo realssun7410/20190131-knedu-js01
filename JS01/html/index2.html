@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트 DOM</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <!-- External 방식(3순위) html 영역-->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Internal 방식(2순위) 스타일영역 */
+        .box {background-color: #00f;}
+        div{background-color: #ff0;}
+         #box1 {
+            width: 200px;
+            height: 200px;
+            
+        } 
+    </style>
+</head>
+
+<body>
+    <!-- Inline 방식(1) html영역-->
+    <div class="box" id="box1" style="background-color: #f93";></div>
+
+    <script>
+    // 자바스크립트 영역
+        const log = console.log;
+        var box1 = document.getElementById("box1");
+        box1.addEventListener("click", box1Click);
+
+        function box1Click(){
+            box1.style.backgroundColor = "blue"
+        }
+            //alert("눌렸어~");
+          
+        /* box1.style.backgroundColor = "#0ff"; */
+        //log(document.getElementById("box1"));
+          document.getElementById("box1").style.width = "400px";
+          document.getElementById("box1").style.height = "200px";
+          document.getElementById("box1").style.backgroundColor = "#f00"; 
+    </script>
+</body>
+
+</html>
