@@ -11,16 +11,31 @@
 
 <body>
     <script>
+        const log = console.log;
+        var html;
+        html = "<div></div>";
+        html = "<ul><li></li></ul>";
+        var str = "가나다";
+        var idx = 12
         var a = 2;
         var b = 3;
         var c = a * b;
-        
+       
+
         //alert("안녕하세요");
-        console.log("123"+"456", 123);
-        console.log(fn(prompt("값을 입력하세요.")));
+        console.log("123" + "456", 123);
+        //console.log(fn(prompt("값을 입력하세요.")));
+
         function fn(x) {
             return Number(x) * Number(x);
         }
+
+        var fn2 = function(x){
+            return Number(x) * Number(x);
+        }
+
+        log(fn) 
+        log(fn2)
     </script>
 </body>
 
