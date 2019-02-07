@@ -29,9 +29,10 @@ radio버튼은 성질이 value를 따로 써줘야 전송이 가능함.
 22. if(pw1.value != pw2.value 에서 != 는 같지않다면 true
 23. 지구전체를 속성과 동작으로 구분
 
-https://github.com/booldook/ 
+24. https://github.com/booldook/ 
 
 
+25.
 //js문법
 var val = obj.value : 값을 가져온다
 obj.value = 10 : 값을 대입한다. 
@@ -87,4 +88,24 @@ if(!exp.text(val)) {
 });
 
 keyup은 한글 영문 상관없이 적용
-     
+
+
+26. 객체에 포함되는 요소 : member와 method 변수와 함수를 넣어야 한다. 
+27. 멤버 변수(속성)
+weight: 75,
+height: 175,
+name: "홍길동",
+gender: "M",
+28. Man이라는 객체 {속성, 동작}
+29. 동작(Method)
+run: function () {
+    log("뛴다");
+},
+eat: function () {
+    log("먹는다");
+30. var $ 제이커리
+31. function b() {
+    log("B!");
+}
+
+b(); 이게 있어야만 실행됨.
