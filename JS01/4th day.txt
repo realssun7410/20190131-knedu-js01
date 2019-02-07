@@ -108,3 +108,5 @@ click이라는 이벤트로 등록
     <script src="../js/index3.js"></script>
 
 div부분은 변수, 객체 부분이기 때문에 위로 올려 안 읽어줘서 무조건 순서를 저렇게 써줘야함
+
+45. button은 글자니까 .bt-wrap {padding: 1rem; text-align: center; }
