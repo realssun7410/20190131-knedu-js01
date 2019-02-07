@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>From Control</title>
+    <link href="../css/w3.css" rel="stylesheet">
+    <link href="../css/index4.css" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+
+    <form action="" name="" id="" method="">
+        <div class="wrap">
+            <div class="w3-panel w3-indigo w3-padding">회원가입</div>
+            <div class="form-line clear">
+                <div class="form-label">아이디</div>
+                <div class="form-cont">
+                    <input type="text" name="uid" placeholder="아이디">
+                </div>
+            </div>
+            <div class="form-line clear">
+                <div class="form-label">패스워드</div>
+                <div class="form-cont">
+                    <input type="password" name="pw1" placeholder="비밀번호">
+                </div>
+            </div>
+            <div class="form-line clear">
+                <div class="form-label">패스워드 확인</div>
+                <div class="form-cont">
+                    <input type="password" name="pw2" placeholder="비밀번호 확인">
+                </div>
+            </div>
+            <div class="form-line clear">
+                <div class="form-label">이름</div>
+                <div class="form-cont">
+                    <input type="text" name="uname" placeholder="이름">
+                </div>
+            </div>
+            <div class="form-line clear">
+                <div class="form-label">성별</div>
+                <div class="form-cont">
+                    <input type="radio" name="gender" id="gender-m" value="M" checked>
+                    <label for="gender-m">남자</label>
+                    <input type="radio" name="gender" id="gender-f" value="F" style="margin-left:30px;">
+                    <label for="gender-f">여자</label>
+                </div>
+            </div>
+            <div class="form-line clear">
+                <div class="form-label">이메일</div>
+                <div class="form-cont">
+                    <input type="text" name="email1" placeholder="이메일"> @
+                    <select name="email2">
+                        <option value="">직접입력</option>
+                        <option value="gmail.com">지메일</option>
+                        <option value="naver.com">네이버</option>
+                        <option value="daum.net">다음</option>
+                        <option value="nate.com">네이트</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-line clear">
+                <div class="form-label"></div>
+                <div class="form-cont">
+                    <select name="tel1">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                    </select> -
+                    <input type="tel" name="tel2" maxlength="4"> -
+                    <input type="tel" name="tel3" maxlength="4">
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="../js/index4.js"></script>
+</body>
+
+</html>
