@@ -1,3 +1,17 @@
+/*
+Method(동작)
+ alert("문자열");
+ focus(""); 내가 지정한 객체에 포커스를 준다
+ submit();
+ if()
+ for()
+Propertie
+ value
+ var val = obj(객체).value : 값을 받아온다.
+ obj.value = 10 : 값을 대입한다.
+ length
+*/
+
 const log = console.log;
 
 function sendForm() {
