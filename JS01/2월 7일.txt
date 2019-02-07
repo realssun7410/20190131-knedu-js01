@@ -1,0 +1,90 @@
+1. W3school css
+2. input 입력창
+3. font-size:16px; 기본 폰트 사이즈로 잡는 추세
+4. https://fonts.google.com/ 폰트
+@import는 css에 갖다쓰는 방법
+5. <form action="join_ok.php" data 베이스에 값을 전송하기 위해서는 value라는 정보가 필요함.
+radio버튼은 성질이 value를 따로 써줘야 전송이 가능함. 
+6. checked 라디오 버튼에서 기본으로 선택되어져 있음
+7. <label for="gender-f">여자</label> 글자만 선택해도 라디오 버튼이 선택될 수 있도록 라벨을 씌어줌
+8. form 은 변수가 name에 담겨서 전달이 됨  
+9. class="w3-input w3-border" 이걸 하게되면 블록처리가 되어서 인라인블록 처리가 별도로 필요하다
+10. 버튼은 <input type="button" value="임시버튼"> 자바스크립트 등으로 넣어줘야함
+11. reset은 input으로 들어간 모든 정보를 다 리셋
+12. method  전송방식 : get방식으로 전송하면 join_ok.php?uid=&pw1 이런방식으로 전송
+그래서 검색창은 get방식으로 함
+13. method : post 방식으로 하면 데이터를 가려서 보여줌
+14. form action 정보를 받을 곳
+15. onclick="자바스크립트 영역"
+16. 자바스크립트에서 -를 빼기로 보기때문에 namedms -보다 _를 쓰는게 나음
+17. <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+     아이콘
+18.  if(0 >-1) {alert("참입니다"); true이므로 실행이 됨
+19. = 하나는 대입
+   == 비교할 때는 두개
+20. return; 은 함수가 더이상 진행이 안되게함
+21. if(pw1.value == "" || pw2.value == "")
+|| 논리합 (or) 둘 중 하나가 참이면 참
+&& 논리곱 (and) 두 개 다 참이여야 참
+22. if(pw1.value != pw2.value 에서 != 는 같지않다면 true
+23. 지구전체를 속성과 동작으로 구분
+
+https://github.com/booldook/ 
+
+
+//js문법
+var val = obj.value : 값을 가져온다
+obj.value = 10 : 값을 대입한다. 
+
+$(this)[0].val()
+[0]을 붙이면 자바스크립트가 된다. 
+
+//jQuery문법
+var val = $(obj).val() : 값을 가져온다
+$(obj).val(10); : 값을 대입한다. 
+
+
+$를 붙이면 제이커리가됨
+//JS   this.value
+//jQuery  $(this).val()
+
+
+
+$("#email3").on("change", function(){
+
+log(this.value);
+log($(this).val());
+
+log(document.join_form.email2));
+log($("input[name='email2']"));
+
+바꿔라(3개 다 같은 것)
+$("input[name='email2']").val($("email3").val());      제이커리는 속성을 method화 시킴
+document.join_form.email2.value = document.join_form.email3.value;
+document.querySelector("input[name='email2']").value = document.querySelector("#email3").value;
+});
+
+직접입력을 선택하면 커서가 가도록
+$("input[name='email2']").val($("email3").val());  
+ if($("#email3).val() == "") {
+ $"input[name='email2']").focus(); 
+
+
+input을 tel 이런걸 안쓰는 것은 사파리에서 지원이 안돼서
+숫자만 입력 정규식을 쓴다.
+/^[0-9]*$/
+
+html에서 class 이름을 number로 준다.
+js에서 $(".number").on("keyup", function(){
+log( $(this).val() );
+var exp = /^[0-9]*$/;
+var val = $(this).val();
+
+/^[0-9]*$/ 에 포함이 되지 !않는다면
+if(!exp.text(val)) {
+ $(this).val("");
+}
+});
+
+keyup은 한글 영문 상관없이 적용
+     
