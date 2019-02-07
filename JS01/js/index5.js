@@ -39,7 +39,7 @@ var Human = (function () {
     function Human(_name) {
         this.name = _name;
     }
-    Human.prototype.eat = function(food) {
+    Human.prototype.eat = function (food) {
         log(this.name + "이(가) " + food + "을(를) 먹습니다.");
     }
     return Human;
@@ -54,7 +54,7 @@ class Human {
 
     }
     function eat() {
-        
+
     }
 }
 */
@@ -68,3 +68,42 @@ var kilsun = new Human("홍길순");
 log(kilsun);
 log(kilsun.name);
 kilsun.eat("회");
+
+/* jQuery를 쓰는 이유
+1. 선택자가 편하다.
+2. animate, fadeIn, fadeOutt, slideDown, slideUp, hide, show
+*/
+
+
+// $("#bt1").click(function(){
+
+// });
+// document.querySelector("#bt1").addEventListener
+
+// $("#box1").click(function () {
+//     $(this).animate({
+//         "width": "100%", "height":"100%"
+//     }, 2000);
+// });
+
+$("#box1").click(function () {
+    $(this).animate({
+        "width": "100%"}, 2000, function () {
+            $(this).animate({"height":"100%"}, 1000);
+            
+        });
+});
+
+var n = 0;
+var interval = window.setInterval(function(){
+  log(n++);
+}, 500);
+
+$("#music > li").each(function(){
+    var li = $(this);
+    var interval = setInterval(function(){  
+        var per = Math.floor(Math.random()*70)+30;
+        li.css({"height":per+"%"});
+    }, 100);
+   
+});

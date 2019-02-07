@@ -109,3 +109,9 @@ eat: function () {
 }
 
 b(); 이게 있어야만 실행됨.
+32. $(this).animate({"width":"100%"}, 2000
+애니메이션을 할 대상과 속도는 필수
+33. 2000 2초 
+34. 제이커리 메소드 중 css를 마음대로 바꾸는 것이 있다 $(this).css({});
+35.  var per = Math.random(); math는 수학과 관련. random은 0부터 1보다 작은 난수가 발생
+36. Math.floor 소수점이하를 버림
