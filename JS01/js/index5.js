@@ -88,22 +88,82 @@ kilsun.eat("회");
 
 $("#box1").click(function () {
     $(this).animate({
-        "width": "100%"}, 2000, function () {
-            $(this).animate({"height":"100%"}, 1000);
-            
+        "width": "100%"
+    }, 2000, function () {
+        $(this).animate({
+            "height": "100%"
+        }, 1000);
+
+    });
+});
+
+// var n = 0;
+// var interval = window.setInterval(function () {
+//     log(n++);
+// }, 500);
+
+// $("#music > li").each(function () {
+//     var li = $(this);
+//     var interval = setInterval(function () {
+//         var per = Math.floor(Math.random() * 70) + 30;
+//         li.css({
+//             "height": per + "%"
+//         });
+//     }, 100);
+
+// });
+
+
+var Equalizer = (function () {
+    function Equalizer(parent, bgColor, size) {
+        var obj = this;
+        var html = '<ul>'
+        for (var i = 1; i <= 5; i++) html += '<li></li>';
+        html += '</ul>';
+        // var html = `
+        // <ul>
+        // <li>1</li>
+        // <li>2</li>
+        // <li>3</li>
+        // <li>4</li>
+        // <li>5</li>
+        // </ul>
+        // `;
+        this.parent = parent;
+        this.bgColor = bgColor;
+        this.size = size;
+        this.parent.append(html);
+        this.ul = this.parent.chilren("ul");
+        this.li = this.ul.chilren("li");
+        this.ul.css({
+            "width":this.size+"px",
+            "height":this.size+"px",
+            "position":"relative"
         });
+        this.li.css({
+            "background-color":this.bgColor,
+            "width":"20%",
+            "position":"absolute",
+            "bottom":"0"
+
+        });
+        //this.li[0].style.backgroundColor = this.bgColor; 자바스크립트로 쓸 때
+        // $(".eq").append()
+        // $(".eq")[0].innerHTML 
+        //     document.getElementsByClassName("eq").innerHTML 
+    }
+    return Equalizer;
 });
 
-var n = 0;
-var interval = window.setInterval(function(){
-  log(n++);
-}, 500);
+var eq = new Equalizer($(".eq"), "#f90", 200);
 
-$("#music > li").each(function(){
-    var li = $(this);
-    var interval = setInterval(function(){  
-        var per = Math.floor(Math.random()*70)+30;
-        li.css({"height":per+"%"});
-    }, 100);
-   
-});
+// <
+// ul id = "music"
+// class = "clear" >
+//     <
+//     li > < /li> <
+//     li > < /li> <
+//     li > < /li> <
+//     li > < /li> <
+//     li > < /li> <
+//     /ul>
