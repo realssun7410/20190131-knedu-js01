@@ -6,7 +6,7 @@
     max-width: 1200px;
 }
 
-#box1 {width: 200px; height:200px; background-color: #f00; border:10px solid #ff6600;}
+/* #box1 {width: 200px; height:200px; background-color: #f00; border:10px solid #ff6600;} */
 
 #music {margin:100px 0 0 100px; width: 100px; height:100px; position: relative;}
 #music > li {width:20%; position: absolute; bottom: 0; background-color: #000000;}

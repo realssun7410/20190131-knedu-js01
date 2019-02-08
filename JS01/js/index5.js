@@ -86,16 +86,16 @@ kilsun.eat("회");
 //     }, 2000);
 // });
 
-$("#box1").click(function () {
-    $(this).animate({
-        "width": "100%"
-    }, 2000, function () {
-        $(this).animate({
-            "height": "100%"
-        }, 1000);
+// $("#box1").click(function () {
+//     $(this).animate({
+//         "width": "100%"
+//     }, 2000, function () {
+//         $(this).animate({
+//             "height": "100%"
+//         }, 1000);
 
-    });
-});
+//     });
+// });
 
 // var n = 0;
 // var interval = window.setInterval(function () {
@@ -117,7 +117,7 @@ $("#box1").click(function () {
 var Equalizer = (function () {
     function Equalizer(parent, bgColor, size) {
         var obj = this;
-        var html = '<ul>'
+        var html = '<ul>';
         for (var i = 1; i <= 5; i++) html += '<li></li>';
         html += '</ul>';
         // var html = `
@@ -129,41 +129,46 @@ var Equalizer = (function () {
         // <li>5</li>
         // </ul>
         // `;
-        this.parent = parent;
+        this.parent = $(parent);
         this.bgColor = bgColor;
         this.size = size;
         this.parent.append(html);
-        this.ul = this.parent.chilren("ul");
-        this.li = this.ul.chilren("li");
+        this.ul = this.parent.children("ul");
+        this.li = this.ul.children("li");
+        console.log(this.li);
+        console.log(this.li[3]);
+        console.log(this.li.eq(0));
+        console.log(this.li.eq(0)[0]);
         this.ul.css({
-            "width":this.size+"px",
-            "height":this.size+"px",
-            "position":"relative"
+            "width": this.size + "px",
+            "height": this.size + "px",
+            "position": "relative"
         });
-        this.li.css({
-            "background-color":this.bgColor,
-            "width":"20%",
-            "position":"absolute",
-            "bottom":"0"
-
+        this.li.each(function (i) {
+            $(this).css({
+                "background-color": obj.bgColor,
+                "width": "20%",
+                "height": "20%",
+                "left": (i * 20) + "%",
+                "position": "absolute",
+                "bottom": "0"
+            });
+            var li = $(this);
+            var interval = setInterval(function () {
+                li.css({
+                    "height": (Math.floor(Math.random()*81)+20)+"%"
+                });
+            }, 100);
         });
-        //this.li[0].style.backgroundColor = this.bgColor; 자바스크립트로 쓸 때
-        // $(".eq").append()
-        // $(".eq")[0].innerHTML 
-        //     document.getElementsByClassName("eq").innerHTML 
     }
     return Equalizer;
-});
+}());
 
 var eq = new Equalizer($(".eq"), "#f90", 200);
 
-// <
-// ul id = "music"
-// class = "clear" >
-//     <
-//     li > < /li> <
-//     li > < /li> <
-//     li > < /li> <
-//     li > < /li> <
-//     li > < /li> <
-//     /ul>
+/*
+Math.floor(90.6)  //90  - 소수점 이하 버림
+Math.ceil(90.2)   //91  - 소수점 이하 올림
+Math.round(90.2)  //90  - 소수점 이하 반올림
+Math.random()     //0부터 1보다 작은 난수 발생 - 0.278....
+*/
